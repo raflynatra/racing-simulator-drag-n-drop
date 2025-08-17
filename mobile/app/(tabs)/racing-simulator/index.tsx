@@ -1,7 +1,7 @@
 import DriverItem from "@/components/racing-simulator/driver-item";
 import { RaceContext } from "@/context/RaceContext";
 import { styles } from "@/styles/racing-simulator";
-import { useNavigation } from "expo-router";
+import { useRouter } from "expo-router";
 import React, { useContext } from "react";
 import {
   FlatList,
@@ -12,14 +12,14 @@ import {
 } from "react-native";
 
 const RacingSimulatorScreen = () => {
-  const navigation = useNavigation();
+  const router = useRouter();
   const { drivers, isRacing, isFinished, startRace, resetRace } =
     useContext(RaceContext);
   const sortedDrivers = drivers.sort((a, b) => b.distance - a.distance);
 
   React.useEffect(() => {
     if (isFinished) {
-      navigation.navigate("leaderboard");
+      router.push("/(tabs)/racing-simulator/leaderboard");
     }
   }, [isFinished]);
 

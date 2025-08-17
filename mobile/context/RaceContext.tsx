@@ -111,6 +111,8 @@ export const RaceProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const startRace = async () => {
+    if (isFinished) resetRace();
+
     setIsRacing(true);
 
     raceIntervalRef.current = setInterval(() => {

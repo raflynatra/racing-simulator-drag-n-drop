@@ -17,7 +17,6 @@ export default function RootLayout() {
     <RaceProvider>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="leaderboard" />
         <StatusBar style="auto" />
       </Stack>
     </RaceProvider>

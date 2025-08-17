@@ -34,6 +34,7 @@ export const styles = StyleSheet.create({
     color: "#fff",
   },
   disabledButton: {
+    borderColor: "#ccc",
     backgroundColor: "#ccc",
   },
 });
@@ -77,8 +78,11 @@ export const driverItemStyles = StyleSheet.create({
 
 export const leaderboardStyles = StyleSheet.create({
   container: {
-    flex: 1,
-    padding: 16,
+    paddingHorizontal: 16,
+    paddingTop: 16,
+    paddingBottom: 60,
+    justifyContent: "space-between",
+    height: "100%",
   },
   title: {
     fontSize: 24,

@@ -27,7 +27,7 @@ const TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="dragDrop"
+        name="drag-drop"
         options={{
           title: "Drag & Drop",
           tabBarIcon: ({ color, size }) => (
