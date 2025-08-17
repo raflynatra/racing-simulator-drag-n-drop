@@ -35,7 +35,7 @@ export const RaceProvider = ({ children }: { children: ReactNode }) => {
         "https://api.openf1.org/v1/drivers?session_key=latest"
       ).then((res) => res.json());
 
-      const selectedDrivers = data.sort(() => 0.5 - Math.random()).slice(0, 3);
+      const selectedDrivers = data.sort(() => 0.5 - Math.random()).slice(0, 4);
       return selectedDrivers.map((driver) => ({
         driver_number: driver.driver_number,
         full_name: driver.full_name,
